@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSPluginTranslate", "RSPluginTranslate.csproj", "{E83C5F2A-B7CB-4CB6-98C3-F5F0DB705EAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E83C5F2A-B7CB-4CB6-98C3-F5F0DB705EAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E83C5F2A-B7CB-4CB6-98C3-F5F0DB705EAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E83C5F2A-B7CB-4CB6-98C3-F5F0DB705EAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E83C5F2A-B7CB-4CB6-98C3-F5F0DB705EAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7438B29-D7FC-421D-94CF-A73B9B1F8F8A}
+	EndGlobalSection
+EndGlobal

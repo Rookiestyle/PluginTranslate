@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ClassEnd" xml:space="preserve">
+    <value>
+		#endregion
+
+		#region NO changes in this area
+		private static StringDictionary m_translation = new StringDictionary();
+
+		public static void Init(Plugin plugin, string LanguageCodeIso6391)
+		{
+			List&lt;string&gt; lDebugStrings = new List&lt;string&gt;();
+			m_translation.Clear();
+			bool bError = true;
+			LanguageCodeIso6391 = InitTranslation(plugin, lDebugStrings, LanguageCodeIso6391, out bError);
+			if (bError &amp;&amp; (LanguageCodeIso6391.Length > 2))
+			{
+				LanguageCodeIso6391 = LanguageCodeIso6391.Substring(0, 2);
+				lDebugStrings.Add("Trying fallback: " + LanguageCodeIso6391);
+				LanguageCodeIso6391 = InitTranslation(plugin, lDebugStrings, LanguageCodeIso6391, out bError);
+			}
+			if (bError)
+			{
+				PluginDebug.AddError("Reading translation failed", 0, lDebugStrings.ToArray());
+				LanguageCodeIso6391 = "en";
+			}
+			else
+			{
+				List&lt;FieldInfo&gt; lTranslatable = new List&lt;FieldInfo&gt;(
+					typeof(PluginTranslate).GetFields(BindingFlags.Static | BindingFlags.Public)
+					).FindAll(x => x.IsInitOnly);
+				lDebugStrings.Add("Parsing complete");
+				lDebugStrings.Add("Translated texts read: " + m_translation.Count.ToString());
+				lDebugStrings.Add("Translatable texts: " + lTranslatable.Count.ToString());
+				foreach (FieldInfo f in lTranslatable)
+				{
+					if (m_translation.ContainsKey(f.Name))
+					{
+						lDebugStrings.Add("Key found: " + f.Name);
+						f.SetValue(null, m_translation[f.Name]);
+					}
+					else
+						lDebugStrings.Add("Key not found: " + f.Name);
+				}
+				PluginDebug.AddInfo("Reading translations finished", 0, lDebugStrings.ToArray());
+			}
+			if (TranslationChanged != null)
+			{
+				TranslationChanged(null, new TranslationChangedEventArgs(LanguageIso6391, LanguageCodeIso6391));
+			}
+			LanguageIso6391 = LanguageCodeIso6391;
+			lDebugStrings.Clear();
+		}
+
+		private static string InitTranslation(Plugin plugin, List&lt;string&gt; lDebugStrings, string LanguageCodeIso6391, out bool bError)
+		{
+			if (string.IsNullOrEmpty(LanguageCodeIso6391))
+			{
+				lDebugStrings.Add("No language identifier supplied, using 'en' as fallback");
+				LanguageCodeIso6391 = "en";
+			}
+			string filename = GetFilename(plugin.GetType().Namespace, LanguageCodeIso6391);
+			lDebugStrings.Add("Translation file: " + filename);
+
+			if (!File.Exists(filename)) //If e. g. 'plugin.zh-tw.language.xml' does not exist, try 'plugin.zh.language.xml'
+			{
+				lDebugStrings.Add("File does not exist");
+				bError = true;
+				return LanguageCodeIso6391;
+			}
+			else
+			{
+				string translation = string.Empty;
+				try { translation = File.ReadAllText(filename); }
+				catch (Exception ex)
+				{
+					lDebugStrings.Add("Error reading file: " + ex.Message);
+					LanguageCodeIso6391 = "en";
+					bError = true;
+					return LanguageCodeIso6391;
+				}
+				XmlSerializer xs = new XmlSerializer(m_translation.GetType());
+				lDebugStrings.Add("File read, parsing content");
+				try
+				{
+					m_translation = (StringDictionary)xs.Deserialize(new StringReader(translation));
+				}
+				catch (Exception ex)
+				{
+					lDebugStrings.Add("Error parsing file: " + ex.Message);
+					LanguageCodeIso6391 = "en";
+					MessageBox.Show("Error parsing translation file\n" + ex.Message, PluginName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+					bError = true;
+					return LanguageCodeIso6391;
+				}
+				bError = false;
+				return LanguageCodeIso6391;
+			}
+		}
+
+		private static string GetFilename(string plugin, string lang)
+		{
+			string filename = UrlUtil.GetFileDirectory(WinUtil.GetExecutable(), true, true);
+			filename += KeePass.App.AppDefs.PluginsDir + UrlUtil.LocalDirSepChar + "Translations" + UrlUtil.LocalDirSepChar;
+			filename += plugin + "." + lang + ".language.xml";
+			return filename;
+		}
+		#endregion
+	}
+
+	#region NO changes in this area
+	[XmlRoot("Translation")]
+	public class StringDictionary : Dictionary&lt;string, string&gt;, IXmlSerializable
+	{
+		public System.Xml.Schema.XmlSchema GetSchema()
+		{
+			return null;
+		}
+
+		public void ReadXml(XmlReader reader)
+		{
+			bool wasEmpty = reader.IsEmptyElement;
+			reader.Read();
+			if (wasEmpty) return;
+			bool bFirst = true;
+			while (reader.NodeType != XmlNodeType.EndElement)
+			{
+				if (bFirst)
+				{
+					bFirst = false;
+					try
+					{
+						reader.ReadStartElement("TranslationVersion");
+						PluginTranslate.TranslationVersion = reader.ReadContentAsLong();
+						reader.ReadEndElement();
+					}
+					catch { }
+				}
+				reader.ReadStartElement("item");
+				reader.ReadStartElement("key");
+				string key = reader.ReadContentAsString();
+				reader.ReadEndElement();
+				reader.ReadStartElement("value");
+				string value = reader.ReadContentAsString();
+				reader.ReadEndElement();
+				this.Add(key, value);
+				reader.ReadEndElement();
+				reader.MoveToContent();
+			}
+			reader.ReadEndElement();
+		}
+
+		public void WriteXml(XmlWriter writer)
+		{
+			writer.WriteStartElement("TranslationVersion");
+			writer.WriteString(PluginTranslate.TranslationVersion.ToString());
+			writer.WriteEndElement();
+			foreach (string key in this.Keys)
+			{
+				writer.WriteStartElement("item");
+				writer.WriteStartElement("key");
+				writer.WriteString(key);
+				writer.WriteEndElement();
+				writer.WriteStartElement("value");
+				writer.WriteString(this[key]);
+				writer.WriteEndElement();
+				writer.WriteEndElement();
+			}
+		}
+	}
+	#endregion
+}</value>
+  </data>
+  <data name="ClassField" xml:space="preserve">
+    <value>
+		public static readonly string {0} = "{1}";</value>
+  </data>
+  <data name="ClassStart" xml:space="preserve">
+    <value>using System;
+using System.Collections.Generic;
+using System.Xml;
+using System.Xml.Serialization;
+using System.IO;
+using System.Reflection;
+
+using KeePass.Plugins;
+using KeePass.Util;
+using KeePassLib.Utility;
+
+using PluginTools;
+using System.Windows.Forms;
+
+namespace PluginTranslation
+{
+	public class TranslationChangedEventArgs : EventArgs
+	{
+		public string OldLanguageIso6391 = string.Empty;
+		public string NewLanguageIso6391 = string.Empty;
+
+		public TranslationChangedEventArgs(string OldLanguageIso6391, string NewLanguageIso6391)
+		{
+			this.OldLanguageIso6391 = OldLanguageIso6391;
+			this.NewLanguageIso6391 = NewLanguageIso6391;
+		}
+	}
+
+	public static class PluginTranslate
+	{
+		public static long TranslationVersion = {1};
+		public static event EventHandler&lt;TranslationChangedEventArgs&gt; TranslationChanged = null;
+		private static string LanguageIso6391 = string.Empty;
+		#region Definitions of translated texts go here
+		public const string PluginName = "{0}";</value>
+  </data>
+</root>
